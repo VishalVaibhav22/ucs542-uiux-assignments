@@ -1,4 +1,4 @@
-# Assignment 2 – Aurora Travels Website
+# Assignment 2 – Travel Agency Multi-Page Website
 
 This is Assignment 2 for the UCS542 UI & UX Specialist course.
 
