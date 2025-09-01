@@ -37,4 +37,4 @@ No setup is needed. Just open `index.html` in your browser to get started.
 
 ## Website Preview
 
-![Homepage Preview](images/assignment4_preview/home.jpg)  
+![Homepage Preview](images/assignment4_preview/home.jpeg)  
