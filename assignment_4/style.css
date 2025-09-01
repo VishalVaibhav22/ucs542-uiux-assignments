@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background: #222;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #ff9900;
+}
+
+.hero {
+  height: 90vh;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #ff9900;
+  margin: 10px auto 0;
+}
+
+.events-list {
+  list-style: none;
+  text-align: left;
+}
+
+.events-list li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 5px solid #ff9900;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+table th {
+  background-color: #333;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input:focus, 
+form select:focus, 
+form textarea:focus {
+    border-color: #ff9900;
+    outline: none;
+}
+
+form button {
+  background: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background: #ff9900;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+#video-section {
+    background: #ffffff;
+    padding: 30px;
+    margin-top: 2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#video-section video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+.audio-guide {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.audio-guide audio {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+.contact-info, .faq {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: #ff9900;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav a {
+    margin: 8px 0;
+  }
+  
+  .hero {
+      height: 50vh;
+  }
+
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
