@@ -1,12 +1,12 @@
-# UI & UX Specialist (UCS542) – Assignments  
+# UI & UX Specialist (UCS542) – Assignments
 
-## 📂 Assignments  
-- **Assignment 1:** Portfolio Website (HTML & CSS)  
-- **Assignment 2:** Travel Agency Multi-Page Website  
-- **Assignment 3:** College Fest Multi-Page Website  
+## 📂 Assignments
+- **Assignment 1:** Portfolio Website (HTML & CSS)
+- **Assignment 2:** Travel Agency Multi-Page Website
+- **Assignment 3:** College Fest Multi-Page Website
+- **Assignment 4:** College Fest Website – Responsive Upgrade (Flexbox, Grid, Multimedia)
 
 ---
 
 **Submitted by:** Vishal Vaibhav  
-**Roll Number:** 102306018  
-
+**Roll Number:** 102306018
