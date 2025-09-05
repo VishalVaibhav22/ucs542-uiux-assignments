@@ -5,6 +5,7 @@
 - **Assignment 2:** Travel Agency Multi-Page Website
 - **Assignment 3:** College Fest Multi-Page Website
 - **Assignment 4:** College Fest Website – Responsive Upgrade (Flexbox, Grid, Multimedia)
+- **Assignment 5:** JavaScript Programs (Numbers, Arrays, Form Validation, Objects, Functions)
 
 ---
 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Assignment 5</title>
+  </head>
+  <body>
+    <h2>Assignment 5</h2>
+
+    <h3>Q1</h3>
+    <script>
+      let a=parseFloat( prompt("Enter first number") );
+      let b = parseFloat(prompt("Enter second number"));
+      document.write("Sum:"+(a+b)+"<br>");
+      document.write("Difference: " + (a-b)+"<br>");
+      document.write("Product: "+ a*b +"<br>");
+      document.write("Quotient:"+ (a / b) + "<br><br>");
+    </script>
+
+    <h3>Q2</h3>
+    <script>
+      let arr=[12,45,7,23,89];
+      let largest = arr[0]; 
+      let smallest=arr[0];
+      for (let i=1;i< arr.length;i++) {
+        if(arr[i]>largest) largest=arr[i];
+        if( arr[i] < smallest ) smallest = arr[i];
+      }
+      document.write("Largest:"+largest+"<br>");
+      document.write("Smallest: " + smallest +"<br>");
+      document.write("Ascending: "+ arr.slice().sort((a,b)=>a-b) +"<br>");
+      document.write( "Descending:" + arr.slice().sort((a,b)=> b-a )+"<br><br>");
+    </script>
+
+    <h3>Q3</h3>
+    <form onsubmit="return validateForm()">
+      Name: <input type="text" id="name"/><br>
+      Email:<input type="text" id="email"/><br>
+      Age:<input type="text" id="age" /> <br>
+      <input type="submit" value="Submit"/>
+    </form>
+    <script>
+      function validateForm(){
+        let n=document.querySelector("#name").value;
+        let e =document.querySelector("#email").value;
+        let a= parseInt( document.querySelector("#age").value );
+
+        if(n==""){
+          alert("Name cannot be empty"); 
+          return false;
+        }
+        let emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if( !emailPattern.test(e)){
+          alert("Invalid email");
+          return false;
+        }
+        if( isNaN(a) || a<18 || a>100 ){
+          alert("Age must be between 18 and 100"); 
+          return false;
+        }
+        alert("Form submitted successfully");
+        return true;
+      }
+    </script>
+
+    <h3>Q4</h3>
+    <script>
+      let student={name:"Vishal",age:20, grade:"A"};
+      student.class="12th"; student.grade="A+";
+      for (let key in student){
+        document.write(key + " : " + student[key]+"<br>");
+      }
+      document.write("<br>");
+    </script>
+
+    <h3>Q5</h3>
+    <script>
+      function process(arr){
+        let even= arr.filter(x=> x%2==0);
+        let doubled = even.map( x => x*2 );
+        let sum=doubled.reduce((a,b)=>a+b,0);
+        return sum;
+      }
+      let result=process([1,2,3,4,5,6,7,8]);
+      document.write("Result : "+ result);
+    </script>
+  </body>
+</html>
