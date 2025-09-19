@@ -1,0 +1,355 @@
+/* --- General Body and Typography --- */
+body {
+  font-family: "Inter", sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.brand-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #6b7280;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  background: #374151;
+  color: #fff;
+}
+
+.nav-links a.active {
+  background: #111827;
+  color: #fff;
+}
+
+/* --- Header Banner --- */
+.banner-container {
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  display: block;
+}
+
+/* --- Main Content --- */
+main.container {
+  padding: 40px 0;
+  flex-grow: 1;
+}
+
+.content-wrapper {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+}
+
+.welcome-section {
+  margin-bottom: 40px;
+}
+
+.welcome-section p {
+  font-size: 18px;
+  color: #4b5563;
+}
+
+/* --- Home Page Specifics --- */
+.destinations-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 1fr;
+}
+
+.destination-card {
+  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.destination-card p {
+  font-size: 16px;
+  color: #374151;
+}
+
+/* --- Packages Page Table --- */
+.table-container {
+  overflow-x: auto;
+}
+
+.packages-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+.packages-table th,
+.packages-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.packages-table thead th {
+  background: #f9fafb;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.packages-table tbody tr:hover {
+  background: #f3f4f6;
+}
+
+/* --- Gallery Page --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  aspect-ratio: 4 / 3;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+  color: #fff;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/* --- Gallery Modal --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+}
+
+#modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Booking Form --- */
+.booking-form {
+  margin-top: 25px;
+  display: grid;
+  gap: 15px;
+}
+
+.booking-form label {
+  font-weight: 600;
+  color: #374151;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.booking-form input,
+.booking-form select {
+  border: 1px solid #d1d5db;
+}
+
+.booking-form button {
+  background: #111827;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+  width: auto;
+}
+
+.booking-form button:hover {
+  background: #374151;
+}
+
+.booking-form button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.price-estimator {
+    background-color: #f3f4f6;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+/* --- About Page --- */
+.contact-info {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 25px;
+  transition: 0.2s;
+}
+
+.social-links a:hover {
+  background: #1f2937;
+  color: #fff;
+}
+
+/* --- Footer --- */
+.site-footer {
+  background: #1f2937;
+  padding: 20px 0;
+  color: #9ca3af;
+  text-align: center;
+  width: 100%;
+}
+
+/* --- Media Queries --- */
+@media (min-width: 768px) {
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .destinations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+  }
+}
